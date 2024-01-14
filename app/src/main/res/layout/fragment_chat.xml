@@ -3,12 +3,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".chat">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <!-- Mensajes del usuario -->
+
+        <!-- Mensajes del bot -->
+
+        <!-- Cuadro de texto para escribir mensajes -->
+
+        <!-- Botón para enviar mensajes -->
+
+        <TextView
+            android:id="@+id/textViewUserMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/bubble_new"
+            android:padding="8dp"
+            android:text="Hola, ¿cómo estás?"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textViewBotMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserMessage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bubble_old"
+            android:padding="8dp"
+            android:text="¡Bien, gracias! ¿Y tú?"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewBotMessage"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="509dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Escribe tu mensaje..."
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_below="@id/editTextMessage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"/>
+
+    </RelativeLayout>
 </FrameLayout>

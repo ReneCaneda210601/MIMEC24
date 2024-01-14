@@ -3,19 +3,19 @@ package com.example.mimec24
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.mimec24.databinding.ActivityMainBinding
+import com.example.mimec24.databinding.ActivityInicioMBinding
 
 class inicioM : AppCompatActivity() {
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding : ActivityInicioMBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityInicioMBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(InicioNM())
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
-                R.id.home-> replaceFragment(inicioM())
+                R.id.home-> replaceFragment(InicioNM())
                 R.id.maps-> replaceFragment(MapaM())
                 R.id.agregar-> replaceFragment(agregar())
                 R.id.chat -> replaceFragment(chat())
